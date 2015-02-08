@@ -1,7 +1,7 @@
 ---
 title: "Practical Machine Learning Course Project"
 author: "Li Xu"
-output: html_document
+output: pdf_document
 ---
 
 ##Summary
@@ -60,7 +60,7 @@ Here we use the random forest algorithm, which is regarded as one of the best st
 RFModel<-randomForest(classe~.,data=TrainingSet,ntree=1234,importance=T,proximity=T)
 ```
 
-##Out-of-Sample Prediction
+##Out-of-Sample Error
 We use this model to predict the validation set and check the confusion matrix by typing
 ```R
 predictions<-predict(RFModel,ValidationSet)

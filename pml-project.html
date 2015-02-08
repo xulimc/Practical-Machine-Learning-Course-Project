@@ -103,8 +103,8 @@ ValidationSet&lt;-TrainingData[-inTrain,]</code></pre>
 <p>Here we use the random forest algorithm, which is regarded as one of the best statistical learning algorithms with high accuracy. We fit a random forest model by</p>
 <pre class="r"><code>RFModel&lt;-randomForest(classe~.,data=TrainingSet,ntree=1234,importance=T,proximity=T)</code></pre>
 </div>
-<div id="out-of-sample-prediction" class="section level2">
-<h2>Out-of-Sample Prediction</h2>
+<div id="out-of-sample-error" class="section level2">
+<h2>Out-of-Sample Error</h2>
 <p>We use this model to predict the validation set and check the confusion matrix by typing</p>
 <pre class="r"><code>predictions&lt;-predict(RFModel,ValidationSet)
 confusionMatrix(predictions,ValidationSet$classe)</code></pre>
